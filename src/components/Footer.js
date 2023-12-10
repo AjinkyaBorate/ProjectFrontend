@@ -1,47 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="bg-body-primary text-white text-center fixed-absolute" style={{backgroundImage:'url("/world-wallpaper.jpg")',backgroundSize:'cover',backgroundRepeat:'no-repeat',backgroundPosition:'center',height:'auto'}}>
+    <footer className="bg-black text-secondary fixed-relative pb-3" >
       <div className="container p-4">
-        <section className="">
-        </section>
-        <section className="mb-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-            harum corrupti dicta, aliquam sequi voluptate quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam explicabo voluptatum ea a quis placeat libero dicta. Est ullam quam dolorum rerum perspiciatis blanditiis vero totam porro magnam ad molestiae impedit architecto placeat debitis expedita, facere eum magni quo.
-          </p>
-        </section>
-        <div className="sub-hero" style={{}}>
-          <div className="row">
-            <div className="col-lg-3 col-md-6 mb-4">
-              <h5 className="text">Links</h5>
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <Link className="text-white" to="/">Home</Link>
-                </li>
-                <li>
-                  <Link className="text-white" to="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link className="text-white" to="/contact">Contact Us</Link>
-                </li>
-                <li>
-                  <Link className="text-white" to="/services">Services</Link>
-                </li>
-              </ul>
-            </div>
+        <div className="row text-center sub-hero">
+          <div className="col">
+            <Link className="footer-link" to="/">Home</Link>
+            
+          </div>
+          <div className="col">
+            <Link className="footer-link" to="/About">About</Link>
+          </div>
+          <div className="col">
+            <Link className="footer-link" to="/Contact">Contacts</Link>
+          </div>
+          <div className="col">
+            <Link className="footer-link" to="/">Services</Link>
           </div>
         </div>
       </div>
-      <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2023 :  
-        <Link className="text-reset fw-bold" to="https://mdbootstrap.com/">onestop.com</Link>
+      <div className='row mx-2'>
+        <div className="col">
+          <Link className="navbar-brand" to="/">
+            <img src="/looogoo.png" width={100} height={25} alt="..." />
+          </Link>
+        </div>
+        <div className="col">
+          Copyright © 2023 Eatable's | Designed By Eatable's
+        </div>
+        <div className="col d-flex justify-content-end">          
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faYoutube} className="social-icon" />
+          </a>
+        </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ title, description, imageUrl, buttonText }) => {
   return (
+    <div className="container">
     <div className="card-container mt-4"> {/* Add margin-top to create space */}
       <div className="card mb-3">
         <img src={imageUrl} className="card-img" alt={title} />
@@ -13,7 +14,7 @@ const Card = ({ title, description, imageUrl, buttonText }) => {
           <p className="card-text">{description}</p>
           
           <button className="btn btn-info">
-            <i className="bi bi-telephone"></i> Contact
+            <Link to="/profile" className="">Contact</Link>
           </button>
           <p className="card-text">
             <small className="text-muted">Last updated 3 mins ago</small>
@@ -22,6 +23,7 @@ const Card = ({ title, description, imageUrl, buttonText }) => {
           
         </div>
       </div>
+    </div>
     </div>
   );
 };
