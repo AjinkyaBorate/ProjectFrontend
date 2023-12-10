@@ -7,24 +7,24 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" style={{ marginBottom: '0px', position: 'relative' }}>
+    <div id="carouselExampleControls" className="carousel slide mt-5" data-bs-ride="carousel" style={{ marginBottom: '0px', position: 'relative' }}>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="/shop1.jpg" className="d-block w-100" alt="..." />
+      <img src="/food.jpg" className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
-      <img src="/shop2.jpg" className="d-block w-100" alt="..." />
+      <img src="/food1.jpg" className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
-      <img src="/shop3.jpg" className="d-block w-100" alt="..." />
+      <img src="/food2.jpg" className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
-      <img src="/shop4.jpg" className="d-block w-100" alt="..." />
+      <img src="/food4.jpg" className="d-block w-100" alt="..." />
     </div>
   </div>
   
   <Link to="https://annapurnamess.onrender.com">
-    <button className="btn btn-outline-dark position-absolute top-50 start-50 translate-middle" style={{ textDecoration: 'underline', color: 'white' }}>
+    <button className="btn position-absolute top-50 start-50 translate-middle" style={{ textDecoration: 'underline', color: 'white' }}>
       Know More About Venture
     </button>
   </Link>
@@ -46,7 +46,7 @@ function Home() {
 <div className="sub-container mb-5" style={{ marginBottom: '30px' }}>
   <h2 className="text-center mb-5 mt-4">Promoting HouseHolds Kitchens on the Internet</h2>
   <div className="row">
-    <div className="col">
+    <div className="col ">
       <div className="card">
         <img src="/enjoy.svg" className="card-img-top" alt="..." />
         <div className="card-body">

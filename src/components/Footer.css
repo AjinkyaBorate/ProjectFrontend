@@ -1,9 +1,35 @@
-.li-Link{
-    color: aliceblue;
-}
+/* Footer.css */
 
-.list-unstyled{
-    justify-content: center;
-    align-items: center;
-
-}
+.footer-link {
+    color:white; 
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .footer-link:hover {
+    color: #007bff;
+  }
+  
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+  }
+  
+  .footer-link:hover::after {
+    width: 100%;
+  }
+  .social-icon {
+    color: white;
+    font-size: 22px; /* Adjust the font-size as needed */
+    margin-right: 10px; /* Adjust spacing between icons */
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Change the color as desired for the hover effect */
+  }
