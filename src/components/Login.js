@@ -38,6 +38,9 @@ function Login() {
       console.log("Email is not valid. Please enter a valid email address.");
     }
   };
+  const goToSignUp = () => {
+    navigate('/signup');
+  };
 
   return (
     <div className="container " style={{ marginTop: "80px", marginBottom: '30px' }}>
@@ -60,7 +63,8 @@ function Login() {
         </div>
         <button type="submit" onClick={signIn} className="btn btn-primary mb-3" >Log In</button>
 
-        <p className="text-center">New user? <button type="submit" className="btn btn-outline-primary ml-1" to='/signup' >Sign Up</button>
+        <p className="text-center">New user? 
+          <button type="submit" className="btn text-primary ml-1" onClick={goToSignUp} >Sign Up</button>
         </p>
       </div>
     </div>

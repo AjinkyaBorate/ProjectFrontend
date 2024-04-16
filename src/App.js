@@ -9,12 +9,8 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
-import Overview from "./components/Profile/Overview";
-import Prices from "./components/Profile/Prices";
-import Features from "./components/Profile/Features";
-import Reveiws from "./components/Profile/Reveiws";
-import Photos from "./components/Profile/Photos";
-
+import Mess from "./components/Mess";
+import Services from "./components/Services";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,7 +22,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <>
-      <Router>
+      <Router >
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -35,13 +31,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} >
-            <Route path="overview" element={<Overview />} />
-            <Route path="features" element={<Features/>} />
-            <Route path="prices" element={<Prices/>} />
-            <Route path="photos" element={<Photos/>} />
-            <Route path="reveiws" element={<Reveiws/>} />
-          </Route>
+          <Route path="/mess"element={<Mess/>}/>
+          <Route path="/services" element={<Services />} />
+
+          <Route path="/profile/:title" element={<Profile/>}></Route>
         </Routes>
         <Footer />
       </Router>

@@ -72,7 +72,7 @@ function Signup() {
         <button type="submit" onClick={signIn} className="btn btn-primary mb-3" >Submit</button>
 
         <p className="text-center">
-          Already Registered? <Link className="btn btn-outline-primary ml-1" to='/login'>Log In</Link>
+          Already Registered? <Link className="btn text-primary ml-1" to='/login'>Log In</Link>
         </p>
       </div>
     </div>

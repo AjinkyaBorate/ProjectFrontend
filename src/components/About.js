@@ -3,17 +3,13 @@ import React from 'react';
 const About = () => {
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4">About Us</h2>
-      <p>
+      {/* <h2 className="text-center mb-4">About Us</h2> */}
+      <p className='mt-3'>
         Welcome to Eatable, your go-to platform for discovering delightful recipes and exploring the world of culinary delights.
       </p>
-
-      <p>
-        At Eatable, we believe that everyone can be a chef in their own kitchen. Whether you're a seasoned cook or just starting on your culinary journey, we provide a diverse range of recipes to suit every taste and skill level.
+      <p>At Eatable, we believe that everyone can be a chef in their own kitchen. Whether you're a seasoned cook or just starting on your culinary journey, we provide a diverse range of recipes to suit every taste and skill level.
       </p>
-
-      <p>
-        Our team of passionate food enthusiasts curates a collection of mouth-watering recipes from around the globe. From quick and easy weekday meals to elaborate weekend feasts, we've got you covered.
+      <p>Our team of passionate food enthusiasts curates a collection of mouth-watering recipes from around the globe. From quick and easy weekday meals to elaborate weekend feasts, we've got you covered.
       </p>
 
       <h4 className="mt-4">Our Mission</h4>

@@ -7,34 +7,14 @@ import { faInstagram, faFacebook, faTwitter, faYoutube } from '@fortawesome/free
 const Footer = () => {
   return (
     <footer className="bg-black text-secondary fixed-relative pb-3" >
-      <div className="container p-4">
-        <div className="row text-center sub-hero">
-          <div className="col">
-            <Link className="footer-link" to="/">Home</Link>
-            
-          </div>
-          <div className="col">
-            <Link className="footer-link" to="/About">About</Link>
-          </div>
-          <div className="col">
-            <Link className="footer-link" to="/Contact">Contacts</Link>
-          </div>
-          <div className="col">
-            <Link className="footer-link" to="/">Services</Link>
-          </div>
-        </div>
-      </div>
-      <div className='row mx-2'>
-        <div className="col">
+      <div className='text-center'>
+        <div className="pt-3">
           <Link className="navbar-brand" to="/">
             <img src="/looogoo.png" width={100} height={25} alt="..." />
           </Link>
         </div>
-        <div className="col">
-          Copyright © 2023 Eatable's | Designed By Eatable's
-        </div>
-        <div className="col d-flex justify-content-end">          
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <div className="mt-3">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="social-icon" />
           </a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
@@ -46,6 +26,9 @@ const Footer = () => {
           <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} className="social-icon" />
           </a>
+        </div>
+        <div className="mt-3">
+          Copyright © 2023 Eatable's | Designed By Eatable's
         </div>
       </div>
     </footer >

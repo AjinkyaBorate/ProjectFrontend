@@ -1,93 +1,165 @@
-import React from 'react'
-import { Link ,Outlet} from 'react-router-dom';
-export default function Profile() {
-    const carauselSize = {
-        height: '410px'
-    }
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import './Profile.css';
+
+import {
+    MDBCol,
+    MDBContainer,
+    MDBIcon,
+    MDBRow,
+    MDBTypography,
+} from "mdb-react-ui-kit";
+const Profile = (props) => {
+    const { title, address, phone } = useParams();
+
     const menuStyle = {
         width: '1115px',
         height: '250px',
+
     };
 
-    const cardStyle = {
-        width: '1115px',
-        height: '250px',
-    };
     return (
         <>
-            <div className='container mt-5'>
-                <div className='mt-2'>
-                    <h1 className='text-center'>Mess Name</h1>
-                    <p>Address:</p>
-                    <p>Contact:</p>
-                </div>
-                <div>
-                    <div id="carouselExample" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/food3.jpg" class="d-block w-100" style={carauselSize} alt="..." />
+            <div className="container">
+                <div className='add'>
+                    <div className='add1'>
+                        <div className='row'>
+                            <div className='col'>
+                                <h2>{title}</h2>
+                                <p>Address: {address}</p>
+                                <p>Contact: {phone}</p>
                             </div>
-                            <div class="carousel-item">
-                                <img src="food5.jpg" class="d-block w-100" style={carauselSize} alt="..." />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="food6.jpg" class="d-block w-100" style={carauselSize} alt="..." />
+                            <div className='col d-flex justify-content-end'>
+                                <img className="" src="/logo.png" style={{ height: '125px', width: '125px' }} alt="" />
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
-                <div className='container border border-dark mt-5' style={menuStyle}>
-                    <div className="card-body">
+                <div className='' style={menuStyle}>
+                    <div className="card-body justify-content-center">
                         <h5 className="card-title"><strong>Today's Menu:</strong></h5>
-                        <ul>
-                            <li>Coffee</li>
-                            <li>Tea</li>
-                            <li>Milk</li>
-                            <li>Milk</li>
-                            <li>Milk</li>
-                            <li>Milk</li>
+                        <ul style={{}}>
+                            <li>Varan</li>
+                            <li>Batti</li>
+                            <li>Vangyachi Bhaji</li>
+                            <li>Shira</li>
+                            <li>Rice</li>
+                            <li>kanda, kakadi, papad etc.</li>
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <Link to="/profile/overview" className="nav-link">Overview</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link to="/profile/features" className="nav-link active">Features</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link to="/profile/prices" className="nav-link active">Prices </Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link to="/profile/photos" className="nav-link active">Photos</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link to="/profile/reveiws" className="nav-link active">Reveiws</Link>
-                        </li>
-                    </ul>
-                </div>
-
-               <Outlet/>
-               
-                <div className="container text-center mb-5 border border-dark" style={cardStyle}>
-                    <div className="card-body">
-                        <h5 className="card-title ">Map</h5>
-
-                    </div>
-                </div>
-
-
             </div>
+            <MDBContainer className="">
+                <MDBRow className="d-flex justify-content-center">
+                    <MDBCol className="text-center">
+                        <h2 className="mb-4">All Reviews</h2>
+
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow className="text-center">
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+
+                        
+                        <p className="px-xl-3">
+                            <MDBIcon fas icon="quote-left" className="pe-2" />
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+                            id officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                        </p><h5 className="">Maria Smantha</h5>
+                        <h6 className=" mb-3">Pune</h6>
+                        <MDBTypography
+                            listUnStyled
+                            className="d-flex justify-content-center mb-0"
+                        >
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon
+                                    fas
+                                    icon="star-half-alt"
+                                    size="sm"
+                                    className="text-warning"
+                                />
+                            </li>
+                        </MDBTypography>
+                    </MDBCol>
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+
+                        
+                        <p className="px-xl-3">
+                            <MDBIcon fas icon="quote-left" className="pe-2" />
+                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                            suscipit laboriosam, nisi ut aliquid commodi.
+                        </p>
+                        <h5 className="">Lisa Cudrow</h5>
+                        <h6 className=" mb-3">Ahmednagar</h6>
+                        <MDBTypography
+                            listUnStyled
+                            className="d-flex justify-content-center mb-0"
+                        >
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                        </MDBTypography>
+                    </MDBCol>
+                    <MDBCol md="4" className="mb-5 mb-md-0">
+
+                       
+                        <p className="px-xl-3">
+                            <MDBIcon fas icon="quote-left" className="pe-2" />
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                            blanditiis praesentium voluptatum.
+                        </p>
+                        <h5 className="">John Smith</h5>
+                        <h6 className=" mb-3">Jalgaon</h6>
+                        <MDBTypography
+                            listUnStyled
+                            className="d-flex justify-content-center mb-0"
+                        >
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon fas icon="star" size="sm" className="text-warning" />
+                            </li>
+                            <li>
+                                <MDBIcon far icon="star" size="sm" className="text-warning" />
+                            </li>
+                        </MDBTypography>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
         </>
-    )
+    );
 }
+
+export default Profile;
+
+
