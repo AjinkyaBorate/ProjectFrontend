@@ -1,0 +1,65 @@
+.cont {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color:black;
+    z-index: 1;
+} 
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Fixed height */
+    width: 180px; /* Fixed width */
+}
+
+.button span {
+    display: flex;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+@keyframes moveText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.own{
+    animation: moveText 3s infinite;
+}

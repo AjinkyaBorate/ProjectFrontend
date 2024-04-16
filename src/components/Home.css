@@ -1,14 +1,28 @@
 #carouselExampleControls {
     width: 100%;
-    max-height: 500px; 
+    max-height: 525px; 
     overflow: hidden; 
-    margin: auto;
   }
-  
+  .ad{
+    color:#007bff;  ;
+  }
   .carousel-inner {
     border-radius: 10px; 
+    align-items: center;
+
   }
-  
+  .carousel-caption {
+    
+    font-family:Copperplate;
+    font-size: 20px;
+    position: absolute;
+    color: #007bff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust the width as needed */
+    text-align: center;
+  }
   .carousel-item {
     text-align: center; 
   }
@@ -43,13 +57,6 @@
   .py-6{
     background-color: rgb(239, 234, 228);
   }
-
-
-
-
-
-  /* Home.css */
-/* Home.css */
 .home-container {
   text-align: center;
   padding: 20px;
@@ -81,4 +88,20 @@
   100% {
     transform: translateY(-20px);
   }
+}
+@keyframes moveText {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-25px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.txt{
+  color:#000000;
+  animation: moveText 3s infinite;
 }
